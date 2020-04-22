@@ -11,6 +11,8 @@ class CookBookTest < Minitest::Test
     @recipe2 = Recipe.new("Cheese Burger")
     @ingredient1 = Ingredient.new({name: "Cheese", unit: "C", calories: 100})
     @ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 30})
+    @ingredient3 = Ingredient.new({name: "Ground Beef", unit: "oz", calories: 100})
+    @ingredient4 = Ingredient.new({name: "Bun", unit: "g", calories: 75})
     end
 
     def test_it_exists
@@ -26,4 +28,5 @@ class CookBookTest < Minitest::Test
       @cookbook.add_recipe(@recipe2)
       assert_equal [@recipe1, @recipe2], @cookbook.recipes
     end
+
 end
