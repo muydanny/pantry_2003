@@ -15,6 +15,14 @@ class Pantry
   end
 
   def enough_ingredients_for?(recipe)
-    false
+    total_ingredients = 0
+    @stock.each do |ingredients, quantity|
+      total_ingredients << quantity
+      if total_ingredients > 22
+        true
+      end
+    end
+    total_ingredients < 0
+    return false
   end
 end
