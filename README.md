@@ -15,7 +15,7 @@ NOTE: In order to earn points, methods must be tested appropriately and implemen
 
 ```markdown
 There are **4** Possible Points in Iteration 1:
-1. Ingredient Creation - including all attr_readers 
+1. Ingredient Creation - including all attr_readers
 2. Pantry Creation - including all attr_readers
 3. Pantry #check_stock
 4. Pantry #restock
@@ -42,7 +42,7 @@ pry(main)> ingredient1.unit
 pry(main)> ingredient1.calories
 # => 50
 
-pry(main)> ingredient2 = Ingredient.new("Macaroni", "oz", 200)
+pry(main)> ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
 # => #<Ingredient:0x007fd88582ed98...>
 
 pry(main)> pantry = Pantry.new
